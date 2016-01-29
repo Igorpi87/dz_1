@@ -1,0 +1,341 @@
+html{
+	height:100%;
+}
+body{
+	height: 100%;
+	background:url("../img/bg_common.jpg") no-repeat;
+	font-family:'OpenSansNormal';
+	font-size: 12px;
+	background-size: cover;
+}
+/*Общие классы*/
+.container{
+	width:960px;
+	margin:0 auto;
+}
+.text-align{
+	text-align: center;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+    float:right;
+}
+.container:before, .clearfix:before, .container:after, .clearfix:after{
+	content: "";
+	display:table;
+}
+.container:after, .clearfix:after{
+	clear:both;
+}
+@font-face {
+	font-family: 'OpenSansNormal';
+    src: url('../fonts/OpenSans-Regular.ttf'); 
+	font-weight: normal;   
+	}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSans-Bold.ttf'); 
+	font-weight: bold; 
+	}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../fonts/OpenSans-Semibold.ttf'); 
+	 
+	}
+
+.wrapper{
+	min-height:100%;
+	margin-bottom:-61px;
+	min-width: 970px;
+	height: auto!important;
+}
+.wrapper:after{
+	content: "";
+	display:block;
+}
+.page-footer, .wrapper:after{
+	height:61px;
+}
+.page-footer{
+	background:#f1eeee;
+	color:rgb(114, 112, 112);
+	width:100%;	
+	min-width: 970px;
+}
+/*шапка*/
+.wrapper .page-header{
+	height:90px;
+	background: url("/img/header_bg.png");
+	position: relative;
+	margin-bottom:35px;
+}
+.wrapper .page-header:after{
+	position: absolute;
+	bottom:-7px;
+	left:0;
+	content: '';
+	height:7px;
+	background: white;
+	width:100%;
+}
+ .container-big{
+    max-width:1200px;
+    min-width: 960px;
+	margin:0 auto;
+	
+}
+.container-big .logobox{
+	display: block;
+	/*border:1px solid pink;*/
+	width:230px;
+	padding-top: 15px;
+}
+/*социальные иконки*/
+.container-big .social{
+	margin-top:27px;
+	padding:0;
+	min-width:190px;
+	
+}
+
+.social .social-item{
+	list-style: none;
+	display:inline-block;
+	width:36px;
+	height:36px;
+	border-radius:50%;
+	background: -moz-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%); 
+    background: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.31),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+	margin-left:12px;
+	overflow: hidden;
+}
+.social .social-item:first-child{
+	margin-left:0;
+}
+
+.social .social-link{
+	display: block;
+	text-indent:-9999px;
+	width:100%;
+	height:100%;
+	background: url("../img/spritesheet1.png") no-repeat;
+}
+.social .social-link.vk{
+	background-position:-756px -6px;
+}
+.social .social-link.fb{
+	background-position:-158px -8px;
+}
+.social .social-link.tw{
+	background-position:-600px -7px;
+}
+.social .social-link.gh{
+	background-position:-11px -7px;
+}
+.social .social-link.vk:hover{
+	background-position:-801px -6px;
+}
+.social .social-link.fb:hover{
+	background-position:-198px -8px;
+}
+.social .social-link.tw:hover{
+	background-position:-654px -7px;
+}
+.social .social-link.gh:hover{
+	background-position:-292px -7px;
+}
+
+/*Навигация*/
+.sidebar{
+	width: 250px;
+	float:left;	
+}
+
+.navigation{
+	background: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+	overflow: hidden;
+	border:1px solid rgb(195,195,195);
+	border-radius: 4px;
+	
+}
+.navigation .nav-list{
+	list-style: none;
+	margin:0;
+	padding:0;	
+}
+.navigation .nav-item:first-child{
+	border-top:none;
+}
+.navigation .nav-item{
+	border-top:1px solid rgb(195,195,195);
+}
+.navigation .nav-item.current{
+	background: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%); 
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.35);
+}
+.navigation .nav-item.current .nav-link{
+	color: rgb(30, 116, 101);
+}
+.navigation .nav-link{
+	text-decoration: none;
+	display:block;
+	font-family: 'OpenSansBold';
+	font-size: 20px;
+	color: rgb(114, 112, 112);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+	padding:14px 20px 14px 30px;
+	
+}
+.navigation .nav-link:hover{
+	background: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+}
+/*контакты*/
+.contacts{
+   padding:0;
+   margin:0;
+}
+.contacts .contacts-title{
+	display:block;
+	border-radius:4px 4px 0 0;
+	padding-left: 30px;
+	padding-top:8px;
+	height:40px;
+	font-family: 'OpenSansSemiBold';
+	font-size:20px;
+	color: rgb(208, 152, 44);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+    line-height: 1.4;
+	background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+    background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	margin-bottom: 0;
+}
+.contacts .contact-list{
+	list-style: none;
+	margin-top:0;
+	padding:0;
+
+
+}
+.contact-list .contact-item{
+	display:block;
+    max-height: 36px;
+	border:1px solid rgb(214,213,211);  
+	margin-bottom:-1px;
+	overflow: hidden; 
+	position: relative;
+}
+.contact-list .contact-item:before{
+	content: " ";
+	display:block;
+	position: absolute;
+	left:20px;
+	top:0;
+	width:50px;
+	height: 36px;
+	border-top: 2px solid #dcb15d;
+    border-right: 2px solid #dcb15d;
+    z-index: 5;
+    transform-origin:65% 50%;
+    -webkit-transform-origin:65% 50%;
+    -ms-transform-origin:65% 50%;
+    transform: rotate(45deg) skew(15deg, 15deg);
+    -webkit-transform: rotate(45deg) skew(15deg, 15deg);
+    -ms-transform: rotate(45deg) skew(15deg, 15deg);
+
+}
+.contact-list .contact-item:last-child{
+	border-radius: 0 0 4px 4px;
+}
+.contact-item .contact-link{
+	color: rgb(114, 112, 112);
+	font-size: 14px;
+    display:block;
+    position: relative;
+    height: 100%;
+    padding-left: 98px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    background: #f2f0ef; 
+    text-decoration: none;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+}
+.contact-item .contact-link:before{
+	content: " ";
+	position: absolute;
+	display: block;
+	left:0;
+	top:0;
+	width:50px;
+	height: 36px;
+	background-image: url(../img/spritesheet2.png);
+	background-repeat: no-repeat;
+}
+.contact-item .contact-link.email:before{
+	background-position: 5px -8px;
+}
+.contact-item .contact-link.phone:before{
+	background-position: -110px -13px;
+}
+.contact-item .contact-link.skype:before{
+	background-position:-51px -12px;
+}
+.contact-item .contact-link:hover{
+    text-decoration: underline;
+    
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f2e7d0 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f2e7d0 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f2e7d0 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+}
+/*контент*/
+.variable-content{
+	width: 650px;
+	float:right;
+
+	
+}
+/*футер*/
+.page-footer .container{
+	width:960px;
+	padding-top: 24px;
+	margin:0 auto;
+	position: relative;	
+}
+.container .copyright{
+	text-align: center;
+
+}
+.page-footer .lock{
+	position: absolute;
+	top: 20px;
+	left: 170px;
+}
+.lock .lock-inner{
+	display: block;
+	height:40px;
+	font-size: 14px;
+	background: url("/img/locked.png") no-repeat;
+	padding-left: 24px;
+	font-family: "OpenSansSemiBold";
+	text-decoration: none;
+	color:rgb(114, 112, 112);
+}
+.lock .lock-inner:hover{
+	background: url("/img/unlocked.png") no-repeat;
+	text-decoration: underline;
+}
