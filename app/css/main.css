@@ -3,7 +3,7 @@ html{
 }
 body{
 	height: 100%;
-	background:url("../img/bg_common.jpg") no-repeat;
+	background: url("../img/bg_common.jpg") no-repeat;
 	font-family:'OpenSansNormal';
 	font-size: 12px;
 	background-size: cover;
@@ -67,6 +67,7 @@ body{
 /*шапка*/
 .wrapper .page-header{
 	height:90px;
+	max-height: 90px;
 	background: url("/img/header_bg.png");
 	position: relative;
 	margin-bottom:35px;
@@ -153,6 +154,7 @@ body{
 .sidebar{
 	width: 250px;
 	float:left;	
+
 }
 
 .navigation{
@@ -163,6 +165,7 @@ body{
 	overflow: hidden;
 	border:1px solid rgb(195,195,195);
 	border-radius: 4px;
+	margin-bottom:34px;
 	
 }
 .navigation .nav-list{
@@ -208,30 +211,35 @@ body{
 .contacts{
    padding:0;
    margin:0;
+   display:block;
+   
 }
-.contacts .contacts-title{
-	display:block;
-	border-radius:4px 4px 0 0;
+.contacts .contacts-title-box{
+   display:block;
+   height:40px;
+   border-radius:4px 4px 0 0;
+   background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+   margin-bottom: 0;
+}
+.contacts-title-box .contacts-title{
+	
 	padding-left: 30px;
-	padding-top:8px;
-	height:40px;
+	padding-top: 8px;
 	font-family: 'OpenSansSemiBold';
 	font-size:20px;
 	color: rgb(208, 152, 44);
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
     line-height: 1.4;
-	background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
-    background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
-	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
-	margin-bottom: 0;
+    min-height: 43px;
+    
 }
 .contacts .contact-list{
 	list-style: none;
 	margin-top:0;
 	padding:0;
-
-
 }
 .contact-list .contact-item{
 	display:block;
@@ -245,7 +253,7 @@ body{
 	content: " ";
 	display:block;
 	position: absolute;
-	left:20px;
+	left: 8px;
 	top:0;
 	width:50px;
 	height: 36px;
@@ -288,13 +296,13 @@ body{
 	background-repeat: no-repeat;
 }
 .contact-item .contact-link.email:before{
-	background-position: 5px -8px;
+	background-position: 0px -8px;
 }
 .contact-item .contact-link.phone:before{
-	background-position: -110px -13px;
+	background-position: -115px -13px;
 }
 .contact-item .contact-link.skype:before{
-	background-position:-51px -12px;
+	background-position:-56px -12px;
 }
 .contact-item .contact-link:hover{
     text-decoration: underline;
@@ -340,5 +348,5 @@ body{
 }
 .lock .lock-inner:hover{
 	background: url("/img/unlocked.png") no-repeat;
-	text-decoration: underline;
+	
 }
