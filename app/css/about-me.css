@@ -10,17 +10,16 @@
 }
 .aboutbox .image-wrap{
 	float:left;
-	margin-left:55px;
-	margin-top:25px;
+	margin-left:38px;
+	margin-top:38px;
 	margin-bottom: 25px;
-	border:2px solid rgb(212, 211, 210);
-	
+	border:2px solid rgb(212, 211, 210);	
 	border-radius: 50%;
 	padding:10px;	
 }
 .image-wrap .avatar-box{
-	width:134px;
-	height:134px;
+	width:132px;
+	height:132px;
 	border-radius: 50%;
     overflow: hidden;
 }
@@ -46,8 +45,8 @@
 }
 .aboutbox .worksheet-wrap{
 	float:right;
-	width:400px;
-	margin-top: 25px;
+	width:420px;
+	margin-top: 35px;
 
 }
 .worksheet-wrap .worksheet-list{
@@ -56,7 +55,10 @@
 	padding:0;
 }
 .worksheet-list .worksheet-item{
-	margin-bottom:10px;
+	margin-bottom:6px;
+}
+.worksheet-list .margin-btm{
+	margin-bottom: 15px;
 }
 .worksheet-list .worksheet-what{
 	float:left;
@@ -65,6 +67,7 @@
     font-weight: 700;
     margin-right: 8px;
 }
+
 .worksheet-list .worksheet-info{
 	font-size: 14px;
 	color: rgb(114, 112, 112);
@@ -73,7 +76,7 @@
 }
 
 .worksheet-info .skills-list{
-	margin-left: 8px;
+	margin-left: 12px;
     list-style: none;
     max-width: 250px;
     font-size: 10px; 
@@ -89,7 +92,8 @@
     display: inline-block;
     color: rgb(30, 116, 101);
     height:21px;
-    margin-right: 20px;
+    margin-right: 24px;
+    margin-bottom:8px;
 	background:url("../img/button-back_1_02.png") repeat-x;
 }
 

@@ -94,7 +94,7 @@ body{
 }
 /*социальные иконки*/
 .container-big .social{
-	margin-top:27px;
+	margin-top:22px;
 	padding:0;
 	min-width:190px;
 	
@@ -110,7 +110,7 @@ body{
     background: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background: -ms-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.31),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-	margin-left:12px;
+	margin-left:13px;
 	overflow: hidden;
 }
 .social .social-item:first-child{
@@ -185,15 +185,18 @@ body{
 .navigation .nav-item.current .nav-link{
 	color: rgb(30, 116, 101);
 }
+.navigation .nav-item.current .nav-link:hover{
+	background: none;
+}
 .navigation .nav-link{
 	text-decoration: none;
 	display:block;
-	font-family: 'OpenSansBold';
+	font-family: 'OpenSansSemiBold';
 	font-size: 20px;
 	color: rgb(114, 112, 112);
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
 	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-	padding:14px 20px 14px 30px;
+	padding:14px 20px 14px 28px;
 	
 }
 .navigation .nav-link:hover{
