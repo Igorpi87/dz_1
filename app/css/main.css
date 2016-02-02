@@ -3,10 +3,11 @@ html{
 }
 body{
 	height: 100%;
-	background: url("../img/bg_common.jpg") no-repeat;
+	background: url("../img/bg_common.jpg") no-repeat center center;
 	font-family:'OpenSansNormal';
 	font-size: 12px;
 	background-size: cover;
+
 }
 /*Общие классы*/
 .container{
