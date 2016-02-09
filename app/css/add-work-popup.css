@@ -42,7 +42,7 @@
 .error-mes{
 	border: 1px solid rgb(203,105,69);
 	background-color: rgb(233,200,188);
-	display: block;
+	display: none;
 	width:300px;
 	margin: 0 auto;
 	border-radius: 4px;
@@ -115,7 +115,7 @@
 	border-radius:0 3px 3px 0;
     background-image: -webkit-linear-gradient(bottom, #e9e6e5 0%, #fbf9f9 94%, #fff 100%);
     background-image: linear-gradient(to top, #e9e6e5 0%, #fbf9f9 94%, #fff 100%);
-    background: url("../img/iCloud down active.png") no-repeat;
+    background: url("../img/iCloud down active.png") no-repeat center center;
     box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
 .btn-add-picture:active{
