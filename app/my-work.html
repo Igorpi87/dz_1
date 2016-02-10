@@ -140,7 +140,7 @@
           <span class="succ-text">Вы молодец!</span>
         </div>
         <form action="" class="new-work-add" id="new-project-add">
-            <a href="" class="close-button"></a>
+            <a href="" class="close-button">close</a>
             <fieldset class="form-box-add">   
                   <label for="form-project-name" class="label-1">Название проекта</label>
                   <input name="form-project-name" type="text" id="project-name" class="input project-add-input-1" placeholder="Введите название">   
@@ -159,9 +159,30 @@
                   <textarea name="form-project-description" type="text" id="project-description" class="project-add-textarea" placeholder="Пара слов о Вашем проекте"></textarea> 
             </fieldset>
             <fieldset class="form-box-add"> 
-                  <button type="submit" class="btn btn-green-2">Добавить</button>
+                  <button type="submit" name="submit" class="btn btn-green-2">Добавить</button>
             </fieldset>
-        </form>        
+        </form> 
+
+        <div id="validprogectname" class="valid validprogectname validnormal">
+          <span class="validtext">введите название</span>
+          <div class="validarrow-left"></div>
+        </div>
+            
+        <div id="validprogectimg" class="valid validprogectimg validnormal">
+          <span class="validtext">изображение</span>
+          <div class="validarrow-left"></div>
+        </div>
+            
+        <div id="validprogecturl" class="valid validprogecturl validnormal">
+          <span class="validtext">ссылка на проект</span>
+          <div class="validarrow-left"></div>
+        </div>
+
+        <div id="validprogectmessage" class="valid validprogectmessage validnormal">
+          <span class="validtext">описание проекта</span>
+          <div class="validarrow-left"></div>
+        </div>
+
       </div>
     
 

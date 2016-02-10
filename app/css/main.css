@@ -3,7 +3,7 @@ html{
 }
 body{
 	height: 100%;
-	background: url("../img/bg_common.jpg") no-repeat center center;
+	background: url("../img/bg_common.jpg") no-repeat center center fixed;
 	font-family:'OpenSansNormal';
 	font-size: 12px;
 	background-size: cover;

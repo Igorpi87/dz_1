@@ -15,8 +15,10 @@
 	 <link href="/bower/normalize-css/normalize.css" rel="stylesheet">
 	 <link href="/css/main.css" rel="stylesheet">
 	 <link href="/css/about-me.css" rel="stylesheet">
+   <link href="/bower/qtip2/jquery.qtip.min.css" rel="stylesheet">
 	 <!-- JS -->
 	 <script src="/bower/modernizer/modernizr.js"></script>
+
    </head>
    <body>
     <!--[if lt IE 8]>
@@ -68,16 +70,16 @@
                                <fieldset class="form-box clearfix">
                                   <div class="input-box pull-left">
                                    <label for="form-name" class="label">Имя</label>
-                                   <input name="name" type="text" id="form-name" class="input heightwidth-1" placeholder="Как к Вам обращаться">
+                                   <input name="name" type="text" id="form-name" class="input heightwidth-1" placeholder="Как к Вам обращаться" qtip-position="left" qtip-content="введите имя">
                                   </div>
                                   <div class="input-box pull-right">
                                    <label for="form-email" class="label">E-mail</label>
-                                   <input name="email" type="text" id="form-email" class="input heightwidth-1" placeholder="Куда мне писать">
+                                   <input name="email" type="text" id="form-email" class="input heightwidth-1" placeholder="Куда мне писать" qtip-position="right" qtip-content="введите e-mail">
                                   </div>
                                </fieldset>
                                <fieldset class="form-box">
                                    <label for="form-message" class="label">Сообщение</label>
-                                   <textarea name="message" id="form-message" class="textarea" placeholder="Кратко в чем суть"></textarea>
+                                   <textarea name="message" id="form-message" class="textarea" placeholder="Кратко в чем суть" qtip-position="left" qtip-content="ваш вопрос"></textarea>
                                </fieldset>
                                
                                <fieldset class="form-box clearfix">
@@ -85,7 +87,7 @@
                                    <div class="captcha-box">
                                        <img src="img/captcha.png" class="captcha-image">
                                    </div>
-                                   <input name="captcha" type="text" id="form-captcha" class="input heightwidth-2 " placeholder="Введите код">
+                                   <input name="captcha" type="text" id="form-captcha" class="input heightwidth-2" placeholder="Введите код" qtip-position="right" qtip-content="код капчи">
                                    
                                </fieldset>
                                <fieldset class="form-box clearfix">
@@ -120,7 +122,7 @@
     <script src="js/contactModule.js"></script>
     <script src="js/validator.js"></script>
     <script src="bower/jquery/dist/jquery.js"></script>
-    <script src="bower/qtip2/basic/jquery.qtip.min.js"></script>
+    <script src="bower/qtip2/basic/jquery.qtip.js"></script>
     <!--  <script src="js/main.js"></script>-->
    </body>
  </html>

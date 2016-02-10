@@ -71,13 +71,13 @@
 	font-size: 14px;
 	color: rgb(114, 112, 112);
 	float:left;	 
-	width:220px;
+	width:270px;
 }
 
 .worksheet-info .skills-list{
 	margin-left: 12px;
     list-style: none;
-    max-width: 250px;
+    max-width: 270px;
     font-size: 10px; 
     padding:0;
      
@@ -147,6 +147,9 @@
     content: " ";
     position: absolute;
     top:100%;
+}
+.aboutbox-list:last-child .aboutbox-item:after{
+	display: none;
 }
 
 
@@ -367,6 +370,12 @@
 	float:right;
 	margin-top:25px;
 }
+.inValidBorderColor{
+	box-shadow: 0px 0px 2px 1px rgb(203, 105, 69);
+}
+.ValidBorderColor{
+	box-shadow: none;
+}
 .form-box .textarea{
 	display: block;
 	width: 384px;
@@ -436,6 +445,11 @@
     background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
 }
-
+.myCustomClass .qtip-content{
+    font-size: 12px;
+    color: rgb(154, 78, 50);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    font-family: 'OpenSansSemiBold';
+}
 
 

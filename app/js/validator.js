@@ -46,7 +46,7 @@ var  validator = (function(){
            		 classes: 'qtip-red qtip-rounded myCustomClass',
            		 tip: {
          			 height: 7,
-        			  width: 12
+        			  width: 
        			 }
      	    }
             }).trigger('show');	
@@ -62,11 +62,11 @@ var  validator = (function(){
     
     $.each(inputs, function(index, val){
       var element = $(val),
-					val = element.val(),
+		  val = element.val(),
           pos = element.attr('qtip-position');
       
       if (!val.length) {
-        element.addClass('light-error');
+        element.addClass('inValidBorderColor');
         _viewTooltip(element, pos);
         valid = false;
       }
