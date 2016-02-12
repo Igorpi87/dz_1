@@ -46,7 +46,7 @@ var  validator = (function(){
            		 classes: 'qtip-red qtip-rounded myCustomClass',
            		 tip: {
          			 height: 7,
-        			  width: 
+        			 width: 12,
        			 }
      	    }
             }).trigger('show');	
@@ -69,7 +69,7 @@ var  validator = (function(){
         element.addClass('inValidBorderColor');
         _viewTooltip(element, pos);
         valid = false;
-      }
+      } 
     });
     
     return valid;

@@ -8,6 +8,8 @@ var contactModule = (function(){
 		$('#contact-me').on('submit', _submitForm); // отправка формы "связаться со мной"
 	};
 
+
+
 	var _submitForm = function (e) {
 		console.log("work with contact form");
 		e.preventDefault();
