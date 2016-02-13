@@ -20,13 +20,13 @@
     font-size: 12px;
     color: rgb(248, 247, 246);
 }
-.close-button{
+.b-close{
 	position: absolute;
 	top:8px;
 	right:7px;
 	display: block;
 	width:13px;
-	height:13px;
+	height:12px;
 	background-image: url("../img/x.png");
 	background-color: none;
 	border:none;
@@ -41,25 +41,22 @@
     margin-bottom: 20px;
 }
 /*error*/
-.error-mes{
-	border: 1px solid rgb(203,105,69);
-	background-color: rgb(233,200,188);
-	display: none;
-	width:300px;
-	margin: 0 auto;
+.status-box{
 	border-radius: 4px;
-	color: rgb(203, 105, 69);
+	display: none;
+	margin: 20px auto;
+	width:300px;
 	padding: 10px;
 }
-.success-mes{
+.error-mes{
 	border: 1px solid rgb(203,105,69);
-	background-color: rgb(233,200,188);
-	display: none;
-	width:300px;
-	margin: 0 auto;
-	border-radius: 4px;
-	color: green;
-	padding: 10px;
+	background-color: rgba(233,200,188,.25);
+	color: rgb(203, 105, 69);
+}
+.success-mes{
+	border: 1px solid rgb(0,180,0);
+	background-color: rgba(0,180,0,.25);
+	color: rgb(0,180,0);
 }
 .error-title{
 	font-size: 16px;

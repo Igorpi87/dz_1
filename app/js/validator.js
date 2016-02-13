@@ -39,7 +39,7 @@ var  validator = (function(){
       		},
       
      	    hide: {
-      		     event: 'keydown'
+      		     event: 'keydown hideToolTip'
             },
             position: location,
             style: {
@@ -54,9 +54,8 @@ var  validator = (function(){
 	};
 	// добавим функцию валидации - пробежимся по всем элементам формы
 	var validationForm = function (form) {
-    
-    // возьмём все элементы формы
-    
+
+      // возьмём все элементы формы
     var inputs = form.find('input, textarea').not('input[type="file"], input[type="hidden"], input[type="submit"]'),
         valid = true;
     
@@ -69,7 +68,9 @@ var  validator = (function(){
         element.addClass('inValidBorderColor');
         _viewTooltip(element, pos);
         valid = false;
-      } 
+      };
+
+
     });
     
     return valid;

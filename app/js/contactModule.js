@@ -6,12 +6,23 @@ var contactModule = (function(){
 
 	var _setUpListeners = function () {
 		$('#contact-me').on('submit', _submitForm); // отправка формы "связаться со мной"
+		$('#contact-me').on('reset', _resetForm);
+		$('form').on('keydown', '.inValidBorderColor', _removeError);
 	};
-
-
+    var _removeError = function () {
+    	$(this).removeClass('inValidBorderColor');
+    };
+    var _resetForm = function (e) {
+    	console.log("ClearForm");
+    	e.preventDefault();
+    	var form = $(this);
+    		form.find('.inValidBorderColor').removeClass('inValidBorderColor');
+    		form.find('input, textarea').not('input[type="file"], input[type="hidden"], input[type="submit"]').trigger('hideToolTip');
+    		form.find('input, textarea').not('input[type="file"], input[type="hidden"], input[type="submit"]').val('');
+    };
 
 	var _submitForm = function (e) {
-		console.log("work with contact form");
+		//console.log("work with contact form");
 		e.preventDefault();
 		var form = $(this),          
 	      url = 'actions/send-mail.php',
@@ -34,6 +45,7 @@ var contactModule = (function(){
 
 	var _ajaxForm = function (form, url) {
 	      if (!validator.validationForm(form)) return false;  // Возвращает false, если не проходит валидацию 
+	      console.log("hell");
 	      var data = form.serialize(); // собираем данные из формы в объект data
 
 	      /*return $.ajax({ // Возвращает Deferred Object

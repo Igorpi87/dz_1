@@ -9,21 +9,31 @@ var myModule = (function () {
 		// прослушка событий
 		$('#new-work-add-popup').on('click', _showModal); // открыть модальное окно
 		$('#new-project-add').on('submit', _addProject); // добавить проект
-	    };
+		$('#element_to_pop_up').on('submit', _addProject); // отправка формы "связаться со мной"
+		// $('#contact-me').on('reset', _resetForm);
+		$('form').on('keydown', '.inValidBorderColor', _removeError);
+	};
+    var _removeError = function () {
+    	$(this).removeClass('inValidBorderColor');
+    };
+
     // работает с модальным окном
 	var _showModal = function (e) {
 		  console.log('Модальное окно');
 		  e.preventDefault();
-		  var divPopup = $('#element_to_pop_up'),
-		      form = divPopup.find('.form');
-		    divPopup.bPopup({
-			modalColor: 'black',
-			speed: 650,
-			transition: 'slideDown',
-			onClose : function () {
-				form.find('.success-mes').text('').hide(),
-				form.find('.error-mes').text('').hide();
-			}
+ 		   var divPopup = $('#element_to_pop_up')
+		 	   form = divPopup.find('.form');
+		       divPopup.bPopup({
+			 //  modalColor: 'black',
+			 //  speed: 650,
+			 //  transition: 'slideDown',
+				onClose : function () { 
+					var form =$(this);
+					form.find('.status-box').text('').addClass('error-mes').removeClass('success-mes').hide();
+					$('.new-work-add').find('.inValidBorderColor').removeClass('inValidBorderColor');
+					form.find('input, textarea').trigger('hideToolTip').val('');
+
+				}
 		  });               
 	    };
     // добавляет проект
@@ -33,26 +43,28 @@ var myModule = (function () {
 
 		  var form = $(this);
 		      url = 'add-project.php';
+		      if (!validator.validationForm(form)) return false;
 		      serverGiveMeAnAnswer = _ajaxForm( form, url);  
 
 		  
-		  serverGiveMeAnAnswer.done(function(ans) {
-		  	console.log(ans);
+		  serverGiveMeAnAnswer.done(function(answer) {
+		  	console.log(answer);
 
-		  	var successBox = form.find('.success-mes'),
-		  	    errorBox = form.find('.error-mes');
 
-		  	if (ans.status === 'OK'){
-		  		console.log(ans.text);
-		  		successBox.hide();
-		  		successBox.text(ans.text).show();
+		  	if (answer.status === 'OK'){
+		  		console.log(answer.text);
+		  		$('.status-box').text('УрАААА').addClass('success-mes').show();
+		  		form.find('input, textarea').trigger('hideToolTip').val('');
 		  	}else{
-		  		console.log(ans.text);
-		  		errorBox.hide();
-		  		errorBox.text(ans.text).show();
+		  		console.log(answer.text);
+		  		
+		  		$('.status-box').text('Плохо').addClass('error-mes').removeClass('success-mes').show();
 		  	}
 		  	
-		  })  
+		  }).fail ( function(answer) {
+		  	console.log('Проблемы в PHP');
+		 	$('.status-box').addClass('error-mes').removeClass('success-mes').text('На сервере произошла ошибка').show();
+    	  });  
 	    };       
     // универсальная функция
     // 1. собирает данные из формы
@@ -69,10 +81,7 @@ var myModule = (function () {
 		  	type: 'POST',
 		  	dataType: 'json',
 		  	data: data,
-		  }).fail ( function(ans) {
-		  	console.log('Проблемы в PHP');
-		  	form.find('.error-mes').text('На сервере произошла ошибка').show();
-    	  });
+		  })
 		 return result;
 	    };   
 
